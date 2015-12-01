@@ -1,0 +1,12 @@
+{
+  "button": {
+    "id": "74:c2:46:94:13:48"
+  },
+    "KRE": {
+    "rid":"" ,
+    "eventDomain": "DashButton",
+    "event": "pressed_button",
+    "webhook": "https://cs.kobj.net/sky/event/4AEDA64A-97BC-11E5-BEF9-32D3E71C24E1/89926811308/DashButton/pressed_button?address=74:c2:46:94:13:48" ,
+    "message": "From amazon dash."
+  }
+}
