@@ -6,7 +6,12 @@ var config = require('./config'),
     request = require('request');
 
 dash.on("detected", function (){
-    sendToKRE(config.KRE.message);
+   var message = {
+        Attributes: {
+          "address" : button.id
+        }
+      };
+    sendToKRE(message);
     console.log("Ding");
   });
 
