@@ -7,9 +7,7 @@ var config = require('./config'),
 
 dash.on("detected", function (dash_id){
    var message = {
-        Attributes: {
           "address" : dash_id
-        }
       };
     sendToKRE(message);
     console.log("Ding");
