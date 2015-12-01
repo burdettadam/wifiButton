@@ -9,7 +9,6 @@ dash.on("detected", function (){
     sendToKRE(config.KRE.message);
     console.log("Ding");
   });
-});
 
 var sendToKRE = function(message){
   var url = config.KRE.webhook;
