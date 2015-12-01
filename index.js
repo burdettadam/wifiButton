@@ -6,6 +6,20 @@ var config = require('./config'),
     request = require('request');
 
 dash.on("detected", function (){
+    sendToKRE(config.KRE.message);
+    console.log("Ding");
+  });
+});
+
+var sendToKRE = function(message){
+  var url = config.KRE.webhook;
+  request.post({url: url, json: message}, function(err, result){
+    console.log('sent', message);
+  });
+};
+
+/*
+dash.on("detected", function (){
   getGif(getRandom(config.giphy.searchTerms), function(err, gif){
     var message = {
         channel: config.slack.channel,
@@ -17,6 +31,8 @@ dash.on("detected", function (){
     console.log("gong");
   });
 });
+
+
 
 var sendToSlack = function(message){
   var url = config.slack.webhook;
@@ -43,3 +59,4 @@ var getGif = function(query, cb){
 var getRandom = function(array){
   return array[Math.floor(Math.random()*array.length)];
 }
+*/
