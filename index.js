@@ -8,7 +8,7 @@ var config = require('./config'),
 dash.on("detected", function (){
    var message = {
         Attributes: {
-          "address" : button.id
+          "address" : config.button.id
         }
       };
     sendToKRE(message);
